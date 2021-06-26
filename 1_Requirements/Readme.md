@@ -4,7 +4,7 @@
      Create a program to collect, store and edit the inventory of a pet shop by dividing into categories for easy access.   
 
 ## Research
-![Inventory management system](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.netsuite.com%2Fportal%2Fresource%2Farticles%2Finventory-management%2Fretail-inventory-management.shtml&psig=AOvVaw2GpkFBRAi6ep0ceyjA8vXI&ust=1624809466584000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCLCm8ovVtfECFQAAAAAdAAAAABAY)
+![Inventory management system](https://images.app.goo.gl/otwwpBpfgf6f798L8)
 -- Content 
 ## Cost and Features and Timeline
 ![Description](Link to Pic)
