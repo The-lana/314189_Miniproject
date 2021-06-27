@@ -17,7 +17,7 @@
 ## Defining Our System
     -- TBD
 ## SWOT ANALYSIS
-![SWOT-Sample](Link to Pic)
+![SWOT](https://github.com/The-lana/314189_miniproject/blob/main/3_Implementation/src/SWOT.png)
 
 # 4W&#39;s and 1&#39;H
 
