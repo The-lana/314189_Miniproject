@@ -8,9 +8,9 @@
 -- Content 
 ## Cost and Features and Timeline
 ![Description](Link to Pic)
-    * Add and remove data conveniently
-        * Reduce inventory on sale 
-        * Add to inventory on Purchase of goods 
+    *Add and remove data conveniently
+        +Reduce inventory on sale 
+        +Add to inventory on Purchase of goods 
     * Access and view the stock of any item conveniently either using complete name of product or using a short code
     * Store data into different categories for easy access and editing 
 
@@ -23,30 +23,37 @@
 
 ## Who:
 
-**TBD**
+**Owners of small shops in general can use this application to organize and easily access their stock**
 
 ## What:
 
-**TBD**
+**Companies often use inventory management software to reduce their carrying costs. The software is used to track products and parts as they are transported from a vendor to a warehouse, between warehouses, and finally to a retail location or directly to a customer.**
 
 ## When:
 
-**TBD**
+**The stock management is a monotonous job to be done by people.This system can be employed when the stores need to reduce their number of employees and use them for better work**
 
 ## Where:
 
-**TBD**
+**It can be used in any retail/wholesale shop where the stocks have to be managed and total turnover can be identified easily using the program**
 
 ## How:
 
-**TBD**
+**The shop owner can update the data in the system when a new item arrives or when a new stock of the earlier item is renewed.And also the number of items sold has to be updated so as to keep the database updated**
 
 # Detail requirements
 ## High Level Requirements:
 --- TBD in Tabular Format 
--- ID | Description | Status (Implemented/Future)
-
+-- ID | Description                              | Status (Implemented/Future)
+-- 01 | Add / Remove items                       |
+-- 02 | Update the present items                 | 
+-- 03 | Search and find items using name or ID   | 
+-- 04 | Find turnover for a month                | 
 
 ##  Low level Requirements:
 --- TBD in Tabular Format 
--- ID | Description | Status (Implemented/Future)
+-- ID | Description                              | Status (Implemented/Future)
+-- 01 | Database to store data                   |
+-- 02 | Approach to search for data              |
+-- 03 | Divide products into categories          |
+-- 04 | Access data based on name using pointers |
