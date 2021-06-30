@@ -43,17 +43,19 @@
 
 # Detail requirements
 ## High Level Requirements:
---- TBD in Tabular Format 
--- ID | Description                              | Status (Implemented/Future)
--- 01 | Add / Remove items                       |
--- 02 | Update the present items                 | 
--- 03 | Search and find items using name or ID   | 
--- 04 | Find turnover for a month                | 
+
+| -- ID | Description                              | Status (Implemented/Future) |
+| ----- | ---------------------------------------- | --------------------------- |
+| -- 01 | Add / Remove items                       |                             |
+| -- 02 | Update the present items                 |                             |
+| -- 03 | Search and find items using name or ID   |                             |
+| -- 04 | Find turnover for a month                |                             |
 
 ##  Low level Requirements:
---- TBD in Tabular Format 
--- ID | Description                              | Status (Implemented/Future)
--- 01 | Database to store data                   |
--- 02 | Approach to search for data              |
--- 03 | Divide products into categories          |
--- 04 | Access data based on name using pointers |
+
+   ID | Description                              | Status (Implemented/Future)
+ ---- | ---------------------------------------- | ---------------------------
+   01 | Database to store data                   |
+   02 | Approach to search for data              |
+   03 | Divide products into categories          |
+   04 | Access data based on name using pointers |
