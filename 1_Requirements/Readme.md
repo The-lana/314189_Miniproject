@@ -4,7 +4,7 @@
      Create a program to collect, store and edit the inventory of a pet shop by dividing into categories for easy access.   
 
 ## Research
-![Inventory management system](https://github.com/The-lana/314189_miniproject/blob/main/3_Implementation/src/chart1.png)
+![Inventory management system](https://github.com/The-lana/314189_miniproject/blob/main/1_Requirements/chart1.png)
 -- Content 
 ## Cost and Features and Timeline
 ![Description](Link to Pic)
@@ -17,7 +17,7 @@
 ## Defining Our System
     -- TBD
 ## SWOT ANALYSIS
-![SWOT](https://github.com/The-lana/314189_miniproject/blob/main/3_Implementation/src/SWOT.png)
+![SWOT](https://github.com/The-lana/314189_miniproject/blob/main/1_Requirements/SWOT.png)
 
 # 4W&#39;s and 1&#39;H
 
