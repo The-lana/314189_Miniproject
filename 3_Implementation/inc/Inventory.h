@@ -1,9 +1,13 @@
-#ifndef inventory.h
-#define inventory.h
+#ifndef inventory_h
+#define inventory_h
 
 #include<stdio.h>
+#include "stdlib.h"
+#include <string.h>
 
-int number_of_items;
+
+//int number_of_items;
+FILE *fileptr;
 
 //int n = 10;  //tried to initialise array of items in category..
 
@@ -11,7 +15,7 @@ int number_of_items;
     {
         /* data */
         char *item_name;
-        int stock;
+        int stock ;
     }item;
     
 /*
