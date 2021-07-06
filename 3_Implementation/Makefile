@@ -10,7 +10,7 @@ SRC = .\src\Inventory_main.c \
 
 
 all:$(SRC) 
-	gcc -o out $(SRC) -I $(Inc)
+	gcc -g -o out $(SRC) -I $(Inc)
 
 
 clean : 

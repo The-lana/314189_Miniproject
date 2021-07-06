@@ -1,3 +1,13 @@
+/**
+ * @file Inventory.h
+ * @author Alna Satheesh
+ * @brief Header file for the program to manage inventory
+ * @version 0.1
+ * @date 2021-07-06
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #ifndef inventory_h
 #define inventory_h
 
@@ -8,6 +18,7 @@
 
 //int number_of_items;
 FILE *fileptr;
+FILE *fileptrtemp;
 
 //int n = 10;  //tried to initialise array of items in category..
 

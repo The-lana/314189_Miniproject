@@ -1,4 +1,13 @@
-
+/**
+ * @file Add_item.c
+ * @author Alna Satheesh
+ * @brief To add an item to the inventory database file by taking input from user 
+ * @version 0.1
+ * @date 2021-07-06
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include "inventory.h"
 
 void Add_item(){
