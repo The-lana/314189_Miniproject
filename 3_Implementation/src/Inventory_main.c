@@ -43,5 +43,5 @@ int main (){
     printf("exiting\n");
     //ask what to do
     
-
+    return 0;
 }

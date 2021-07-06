@@ -31,7 +31,7 @@ void Add_item(){
       
         char *tobewrittenl;
         tobewrittenl = malloc(50);
-        snprintf(tobewrittenl ,30,"%s %d\n",itemToAdd.item_name,itemToAdd.stock);
+        snprintf(tobewrittenl ,30,"%s\n%d\n",itemToAdd.item_name,itemToAdd.stock);
        fputs(tobewrittenl,fileptr);
        free(tobewrittenl);
     }

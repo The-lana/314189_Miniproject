@@ -1,6 +1,8 @@
-dogfood 45
-catfood 52
-cat 3
-dog 4
-fish 90
-fishfood 76
+cat
+34
+dog
+43
+fishfood
+56
+cage
+78
