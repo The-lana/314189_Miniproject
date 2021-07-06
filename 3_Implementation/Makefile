@@ -1,6 +1,6 @@
 #target : dependencies
 #<tab>function
-
+build = build
 Inc = .\inc\
 
 SRC = .\src\Inventory_main.c \
@@ -18,6 +18,7 @@ clean :
 
 run : 
 	.\out.exe
+
 	
 
 	
