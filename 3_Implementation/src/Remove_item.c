@@ -46,7 +46,7 @@ void Remove_item()
             //fputs(temp,fileptrtemp);
             fprintf(fileptrtemp , "%s \n" , temp);
             //printf("printing to temp file %s\n" , temp);
-            free(temp);
+            //free(temp);
         }
         else {
             fscanf(fileptr , " %s" , temp);
@@ -76,12 +76,12 @@ void Remove_item()
       printf("fseek done\n");
        while(!feof(fileptrtemp))
        {
-           printf("in while \n");
+           //printf("in while \n");
              //temp2 =  malloc (30);
            fscanf(fileptrtemp ,"%s", temp2) ;
          fprintf(fileptr ,"%s\n" ,temp2);
         printf("%s" , temp2);
-        free(temp2);
+        //free(temp2);
        }
 
     printf("removed item successfully\n");
