@@ -28,7 +28,7 @@ SRC = ./src/Inventory.c \
 ./src/Search_item.c 
 
 
-all : $(SRC) 
+all : $(SRC) $(BUILD)
 	gcc -o $(PROJECT_OUTPUT) $(SRC) $(INC)
 
 
