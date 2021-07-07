@@ -10,7 +10,7 @@
  */
 #include "inventory.h"
 
-int writeToFile(item*);
+
 
 /**
  * @brief is called from main on selesction od add item to database.

@@ -53,7 +53,7 @@ void Search_item()
         }
        
     }
-    //free(stringTosearch);
+    free(stringTosearch);
     
     if (count == 0 )
     {

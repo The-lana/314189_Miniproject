@@ -2,14 +2,18 @@
 #<tab>function
 
 ifeq ($(OS), Windows_NT)
-	EXECUTABLE=a.exe
+	EXECUTABLE = exe
+	RM = del
 else
-	EXECUTABLE=a.out
+	EXECUTABLE=out
+	RM = rm -rf
 endif
 
 
-$(EXECUTABLE): prog.c
-	gcc prog.c
+#$(EXECUTABLE): prog.c
+#	gcc prog.c
+
+$(EXECUTABLE) : out.exe
 
 #header files
 INC = -I ./inc\
@@ -27,34 +31,34 @@ all:$(SRC)
 
 
 clear : 
-	del ./$(EXECUTABLE)
+	$(RM) $(BUILD)
 
 run : $(PROJECT_NAME)
 	./$(PROJECT_OUTPUT)
 
 # All test source files
-TEST_SRC = src/Inventory.c\
-src/Add_item.c \
+TEST_SRC = src/Add_item.c \
 src/Remove_item.c \
 src/Search_item.c \
 test/Inventory_test.c\
 unity/unity.c\
 
 PROJECT_NAME = Inventory
-POOJECT_OUTPUT = $(BUILD)/$(EXECUTABLE)
+PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).$(EXECUTABLE)
 
 TEST_OUTPUT = $(BUILD)/$(PROJECT_NAME)_test.out
 
 # Output directory
 BUILD = build
 
-test:$(BUILD)
+test : $(BUILD)
 	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
 	./$(TEST_OUTPUT)
 
 coverageCheck:$(BUILD)
-	g++ -fprofile-arcs -ftest-coverage -fPIC -O0 $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) 
+	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
 	./$(TEST_OUTPUT)
+	gcov -a $(TEST_SRC) 
 
 $(BUILD):
 	mkdir build

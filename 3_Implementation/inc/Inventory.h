@@ -42,6 +42,7 @@ typedef struct category
  
 
 void Add_item();
+int writeToFile(item*);
 void Remove_item();
 void Search_item();
 
