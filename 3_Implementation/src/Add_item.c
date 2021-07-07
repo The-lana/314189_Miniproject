@@ -27,7 +27,7 @@ void Add_item(){
     scanf("%30s" , itemToAdd.item_name);
     getchar();
 
-    printf("\nEnter number of %30s\n" , itemToAdd.item_name);
+    printf("\nEnter number of %s\n" , itemToAdd.item_name);
     scanf("%d", &itemToAdd.stock );
 
     writeToFile(&itemToAdd);
@@ -51,7 +51,7 @@ int writeToFile(item *itemToAdd){
         ///store the data from struct 'item' into a string which is then written into the database
         char *tobewrittenl;
         tobewrittenl = malloc(50);
-        snprintf(tobewrittenl ,30,"%50s\n%d\n",itemToAdd->item_name,itemToAdd->stock);
+        snprintf(tobewrittenl ,30,"%s\n%d\n",itemToAdd->item_name,itemToAdd->stock);
        fputs(tobewrittenl,fileptr);
        free(tobewrittenl);
     }

@@ -13,7 +13,7 @@ endif
 #$(EXECUTABLE): prog.c
 #	gcc prog.c
 
-$(EXECUTABLE) : out.exe
+#$(EXECUTABLE) : out.exe
 
 #header files
 INC = -I ./inc\
@@ -26,7 +26,7 @@ SRC = .\src\Inventory.c \
 .\src\Search_item.c 
 
 
-all:$(SRC) 
+all : $(SRC) 
 	gcc -o $(PROJECT_OUTPUT) $(SRC) $(INC)
 
 

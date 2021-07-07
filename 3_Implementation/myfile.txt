@@ -1,9 +1,5 @@
-cat
-34
 fishfood
 56
-cage
-78
 turtle
 59
 lovebirds
@@ -12,6 +8,10 @@ parrot
 67
 pedigree
 84
-
 cockateil
 32
+dog
+9
+glider
+51
+

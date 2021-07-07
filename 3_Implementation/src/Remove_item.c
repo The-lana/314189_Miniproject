@@ -79,7 +79,7 @@ void Remove_item()
            //printf("in while \n");
              //temp2 =  malloc (30);
            fscanf(fileptrtemp ,"%30s", temp2) ;
-         fprintf(fileptr ,"%30s\n" ,temp2);
+         fprintf(fileptr ,"%s\n" ,temp2);
         printf("%30s" , temp2);
         //free(temp2);
        }
