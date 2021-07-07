@@ -65,7 +65,6 @@ clean:
 
 #Document files
 DOCUMENTATION_OUTPUT = documentation/html
-
 #document the code using doxygen
 doc : 
 	make -C ./documentation
