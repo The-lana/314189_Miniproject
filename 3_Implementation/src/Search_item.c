@@ -10,9 +10,13 @@
  */
  #include "inventory.h"
 
+/**
+ * @brief 
+ * 
+ */
 void Search_item()
 {
-    int count =0;
+    
         item itemFromSearch;
         itemFromSearch.stock = 0;
         itemFromSearch.item_name = NULL;
@@ -22,7 +26,7 @@ void Search_item()
    
     char *stringTosearch = malloc(30);      //name from input to search
     printf("Enter name of item to search\n");
-    scanf("%s" , stringTosearch);
+    scanf("%30s" , stringTosearch);
     //getchar();
     
   
@@ -35,27 +39,29 @@ void Search_item()
     else
     {
     
+    int count =0;
     char * stringFromFile = malloc(30);
     while(!feof(fileptr))
     {
-        fscanf(fileptr,"%s", stringFromFile);
+        fscanf(fileptr,"%30s", stringFromFile);
         if(strcmp(stringFromFile,stringTosearch)==0 ) 
         {
            strcpy(itemFromSearch.item_name,stringFromFile);
-            fscanf(fileptr , "%s", stringFromFile) ;
+            fscanf(fileptr , "%30s", stringFromFile) ;
            itemFromSearch.stock = atoi(stringFromFile);
            count++;
         }
        
     }
     free(stringTosearch);
+    
     if (count == 0 )
     {
            printf("\nItem Not found \n");
     }
     else {
     printf("Item found \n");
-    printf("Name : %s stock available : %d\n", itemFromSearch.item_name , itemFromSearch.stock );
+    printf("Name : %30s stock available : %d\n", itemFromSearch.item_name , itemFromSearch.stock );
     }
 
     free(itemFromSearch.item_name);

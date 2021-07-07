@@ -16,12 +16,12 @@
 #include <string.h>
 
 
-//int number_of_items;
+///filepointer used by different files to write data into database file
 FILE *fileptr;
+///fileointer used to delete item from the database by copying into anither file
 FILE *fileptrtemp;
 
-//int n = 10;  //tried to initialise array of items in category..
-
+//a struct to store the name and details of the items stored in the database, only stock has been added for now
   typedef struct 
     {
         /* data */

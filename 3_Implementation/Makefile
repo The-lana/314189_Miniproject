@@ -23,7 +23,7 @@ SRC = .\src\Inventory.c \
 
 
 all:$(SRC) 
-	gcc -g -o $(PROJECT_OUTPUT) $(SRC) $(INC)
+	gcc -o $(PROJECT_OUTPUT) $(SRC) $(INC)
 
 
 clear : 

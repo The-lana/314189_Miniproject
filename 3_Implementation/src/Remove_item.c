@@ -30,7 +30,7 @@ void Remove_item()
     printf("Failed to open file\n");
 
     printf("Enter item to be removed\n");
-    scanf("%s\n" , itemToRemove.item_name); 
+    scanf("%30s\n" , itemToRemove.item_name); 
     //has an error that it doesnt move to next command automatically unless you enter any character
     getchar();
     //getchar();
@@ -39,17 +39,17 @@ void Remove_item()
 
     while(!feof(fileptr))
     {
-        fscanf(fileptr, "%s",temp);
+        fscanf(fileptr, "%30s",temp);
         //printf("%s " , temp);
          if(strcmp(itemToRemove.item_name , temp)!=0 ) 
         {
             //fputs(temp,fileptrtemp);
-            fprintf(fileptrtemp , "%s \n" , temp);
+            fprintf(fileptrtemp , "%30s \n" , temp);
             //printf("printing to temp file %s\n" , temp);
             //free(temp);
         }
         else {
-            fscanf(fileptr , " %s" , temp);
+            fscanf(fileptr , " %30s" , temp);
             //printf("in else\n");
         }
     }
@@ -78,9 +78,9 @@ void Remove_item()
        {
            //printf("in while \n");
              //temp2 =  malloc (30);
-           fscanf(fileptrtemp ,"%s", temp2) ;
-         fprintf(fileptr ,"%s\n" ,temp2);
-        printf("%s" , temp2);
+           fscanf(fileptrtemp ,"%30s", temp2) ;
+         fprintf(fileptr ,"%30s\n" ,temp2);
+        printf("%30s" , temp2);
         //free(temp2);
        }
 
