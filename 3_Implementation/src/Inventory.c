@@ -33,11 +33,13 @@ int main (){
     printf("do you want to continue\n Enter 1 to continue and 0 to exit");
     scanf("%d" , &check_to_continue);
     
+    /*
     if(check_to_continue != '1' || check_to_continue !='0') {
     printf("invalid input\n");
     printf("enter correct value\n");
     }
-
+    */
+   
     }while(check_to_continue == 1);
     
     printf("exiting\n");

@@ -16,7 +16,7 @@ all:$(SRC)
 	gcc -g -o out $(SRC) $(INC)
 
 
-clean : 
+clear : 
 	del .\out.exe
 
 run : 
@@ -47,3 +47,10 @@ coverageCheck:$(BUILD)
 
 $(BUILD):
 	mkdir build
+
+# Remove all the built files, invoke by `make clean`
+clean:
+	rm -rf $(BUILD)
+	
+	
+# $(DOCUMENTATION_OUTPUT)
