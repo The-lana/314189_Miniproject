@@ -1,9 +1,9 @@
 #target : dependencies
 #<tab>function
-build = build
+
 Inc = .\inc\
 
-SRC = .\src\Inventory_main.c \
+SRC = .\src\Inventory.c \
 .\src\Add_item.c \
 .\src\Remove_item.c \
 .\src\Search_item.c 
@@ -18,7 +18,3 @@ clean :
 
 run : 
 	.\out.exe
-
-	
-
-	

@@ -10,6 +10,8 @@
  */
 #include "inventory.h"
 
+int writeToFile(item*);
+
 void Add_item(){
     //number_of_items ++;
     item itemToAdd;
@@ -22,20 +24,27 @@ void Add_item(){
 
     printf("\nEnter number of %s\n" , itemToAdd.item_name);
     scanf("%d", &itemToAdd.stock );
-   
+    writeToFile(&itemToAdd);
+    
+
+}
+
+int writeToFile(item *itemToAdd){
     fileptr = fopen("myfile.txt", "a");
     if(fileptr == NULL) {
         perror("Error opening file.\n");
+        return -1;
         }
     else {
       
         char *tobewrittenl;
         tobewrittenl = malloc(50);
-        snprintf(tobewrittenl ,30,"%s\n%d\n",itemToAdd.item_name,itemToAdd.stock);
+        snprintf(tobewrittenl ,30,"%s\n%d\n",itemToAdd->item_name,itemToAdd->stock);
        fputs(tobewrittenl,fileptr);
        free(tobewrittenl);
     }
-    free(itemToAdd.item_name);
+    free(itemToAdd->item_name);
     fclose(fileptr);
+    return 0;
 
 }
