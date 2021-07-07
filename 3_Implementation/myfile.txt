@@ -4,12 +4,12 @@ fishfood
 56
 cage
 78
-78
-dog
-56
 turtle
 59
 lovebirds
 987
 parrot
 67
+pedigree
+84
+

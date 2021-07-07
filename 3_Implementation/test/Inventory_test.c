@@ -31,8 +31,11 @@ int main()
 
 /* Write all the test functions */ 
 void test_add(void) {
-  TEST_ASSERT_EQUAL(30, add(10, 20));
-  TEST_ASSERT_EQUAL(-10, add(10, -20));
-  TEST_ASSERT_EQUAL(-30, add(-10, -20));
-  TEST_ASSERT_EQUAL(10, add(-10, 20));
+    item itemForTest;
+    itemForTest.item_name="turtle";
+    itemForTest.stock = 60;
+  TEST_ASSERT_EQUAL(0, add(&itemForTest));
+  //TEST_ASSERT_EQUAL(-10, add(10, -20));
+  //TEST_ASSERT_EQUAL(-30, add(-10, -20));
+  //TEST_ASSERT_EQUAL(10, add(-10, 20));
 }
