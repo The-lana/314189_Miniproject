@@ -9,6 +9,8 @@ else
 	RM = rm -rf
 endif
 
+# Output directory
+BUILD = build
 
 #$(EXECUTABLE): prog.c
 #	gcc prog.c
@@ -20,10 +22,10 @@ INC = -I ./inc\
 -I ./unity\
 
 #source codes
-SRC = .\src\Inventory.c \
-.\src\Add_item.c \
-.\src\Remove_item.c \
-.\src\Search_item.c 
+SRC = ./src/Inventory.c \
+./src/Add_item.c \
+./src/Remove_item.c \
+./src/Search_item.c 
 
 
 all : $(SRC) 
@@ -48,8 +50,6 @@ PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).$(EXECUTABLE)
 
 TEST_OUTPUT = $(BUILD)/$(PROJECT_NAME)_test.out
 
-# Output directory
-BUILD = build
 
 test : $(BUILD)
 	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
