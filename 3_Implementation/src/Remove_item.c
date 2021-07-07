@@ -18,7 +18,7 @@ void Remove_item()
     itemToRemove.item_name = malloc(30);
     char * temp;
     temp = malloc(30);
-    itemToRemove.stock=0;
+ 
     fileptr = fopen("myfile.txt" , "r");
 
     if(fileptr == NULL)
