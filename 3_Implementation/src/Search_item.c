@@ -53,7 +53,7 @@ void Search_item()
         }
        
     }
-    free(stringTosearch);
+    //free(stringTosearch);
     
     if (count == 0 )
     {
@@ -65,7 +65,7 @@ void Search_item()
     }
 
     free(itemFromSearch.item_name);
-    //free(stringTosearch);
+    free(stringTosearch);
     free(stringFromFile);
     }
     fclose(fileptr);
