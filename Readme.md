@@ -23,8 +23,9 @@ Folder             | Description
 
 PS No. |  Name   |    Features    | Issuess Raised |Issues Resolved|No Test Cases|Test Case Pass
 -------|---------|----------------|----------------|---------------|-------------|--------------
-`ABC` | Alna     | Add items        | X No          | X No      |X No           |X No     
-`DEF` | Alna     | Search for added items | X No     | X No     |X No           |X No    
+#1 | Alna     | Add items        | X No          | X No      |X No           |X No     
+#2 | Alna     | Search for added items | X No     | X No     |X No           |X No    
+#3  | Alna    | Remove items      |       X No    |   X No    |     X No      |  X No
 
 
 ## Challenges Faced and How Was It Overcome
