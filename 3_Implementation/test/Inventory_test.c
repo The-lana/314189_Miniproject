@@ -23,8 +23,8 @@ int main()
 
 /* Run Test functions */
   RUN_TEST(test_add);
-  RUN_TEST(test_remove);
-  RUN_TEST(test_search);
+  //RUN_TEST(test_remove);
+  //RUN_TEST(test_search);
     /* Close the Unity Test Framework */
   return UNITY_END();
 }

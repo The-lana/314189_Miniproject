@@ -4,9 +4,12 @@ Visit [Pages for Report -optional](using github.io option)
 
 Build | Code Quality | Unity | [Git Inspector](using github.io option)
 ------|----------|-------|--------------
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4063780867124535b965e7d3f93bcd66)](https://www.codacy.com/gh/The-lana/314189_miniproject/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=The-lana/314189_miniproject&amp;utm_campaign=Badge_Grade)
+[![C CI - Build Status on Linux](https://github.com/The-lana/314189_miniproject/actions/workflows/c-build.yml/badge.svg)](https://github.com/The-lana/314189_miniproject/actions/workflows/c-build.yml)
+[![C CI - Build Status on Windows.](https://github.com/The-lana/314189_miniproject/actions/workflows/c-buildWin.yml/badge.svg)](https://github.com/The-lana/314189_miniproject/actions/workflows/c-buildWin.yml)
+[![Cppcheck-Static Code Quality Analysis](https://github.com/The-lana/314189_miniproject/actions/workflows/Cppcheck.yml/badge.svg)](https://github.com/The-lana/314189_miniproject/actions/workflows/Cppcheck.yml)
 https://www.code-inspector.com/project/24736/score/svg
 https://www.code-inspector.com/project/24736/status/svg
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4063780867124535b965e7d3f93bcd66)](https://www.codacy.com/gh/The-lana/314189_miniproject/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=The-lana/314189_miniproject&amp;utm_campaign=Badge_Grade)
 
 ## Folder Structure
 Folder             | Description
@@ -20,8 +23,9 @@ Folder             | Description
 
 PS No. |  Name   |    Features    | Issuess Raised |Issues Resolved|No Test Cases|Test Case Pass
 -------|---------|----------------|----------------|---------------|-------------|--------------
-`ABC` | Alna     | Add items        | X No          | X No      |X No           |X No     
-`DEF` | Alna     | Search for added items | X No     | X No     |X No           |X No    
+#1 | Alna     | Add items        | X No          | X No      |X No           |X No     
+#2 | Alna     | Search for added items | X No     | X No     |X No           |X No    
+#3  | Alna    | Remove items      |       X No    |   X No    |     X No      |  X No
 
 
 ## Challenges Faced and How Was It Overcome
