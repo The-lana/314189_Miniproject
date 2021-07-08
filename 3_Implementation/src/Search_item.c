@@ -10,30 +10,40 @@
  */
  #include "inventory.h"
 
+ 
+
 /**
- * @brief 
+ * @brief Function to read the item to be searched and then value is passed to a function that opens the file and serches in it
  * 
  */
 void Search_item()
 {
-    
-        item itemFromSearch;
-        itemFromSearch.stock = 0;
-        itemFromSearch.item_name = NULL;
-    itemFromSearch.item_name = malloc(30);
+        ///A struct variable itemForSearch to receive and store data from input.
+       
      
-    printf("\tSearch item\n");
+    printf("\n\tSearch item\n\n");
    
     char *stringTosearch = malloc(30);      //name from input to search
     printf("Enter name of item to search\n");
     scanf("%30s" , stringTosearch);
     //getchar();
+
+    Searchinfile( stringTosearch);
+
     
-  
+    free(stringTosearch);
+}
+
+int Searchinfile(char *stringTosearch)
+{
+   item itemFromSearch;
+        //itemFromSearch.stock = 0;
+        itemFromSearch.item_name = NULL;
+    itemFromSearch.item_name = malloc(30);
     fileptr = fopen("myfile.txt" , "r");     //opening inventory file
 	
     if(fileptr == NULL) {
-	//	return(-1);
+	return (-1);
     printf("File not found\n");
 	}
     else
@@ -44,9 +54,9 @@ void Search_item()
     while(!feof(fileptr))
     {
         fscanf(fileptr,"%30s", stringFromFile);
-        if(strcmp(stringFromFile,stringTosearch)==0 ) 
+        if(strcmp(stringFromFile , stringTosearch)==0 ) 
         {
-           strcpy(itemFromSearch.item_name,stringFromFile);
+           strcpy(itemFromSearch.item_name , stringFromFile);
             fscanf(fileptr , "%30s", stringFromFile) ;
            itemFromSearch.stock = atoi(stringFromFile);
            count++;
@@ -60,13 +70,14 @@ void Search_item()
            printf("\nItem Not found \n");
     }
     else {
-    printf("Item found \n");
-    printf("Name : %30s stock available : %d\n", itemFromSearch.item_name , itemFromSearch.stock );
+    printf("Item found \n\n");
+    printf("Name : %s \nstock available : %d\n", itemFromSearch.item_name , itemFromSearch.stock );
     }
 
-    free(itemFromSearch.item_name);
-    free(stringTosearch);
+    
     free(stringFromFile);
+    free(itemFromSearch.item_name);
     }
     fclose(fileptr);
+    return 0;
 }

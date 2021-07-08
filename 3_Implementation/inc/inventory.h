@@ -44,6 +44,9 @@ typedef struct category
 void Add_item();
 int writeToFile(item*);
 void Remove_item();
+int WritetoTempfile(item *);
+int WritefromTempfile();
 void Search_item();
+int Searchinfile(char *);
 
 #endif

@@ -24,19 +24,19 @@ int main()
 /* Run Test functions */
   RUN_TEST(test_add);
   //RUN_TEST(test_remove);
-  //RUN_TEST(test_search);
+  RUN_TEST(test_search);
     /* Close the Unity Test Framework */
   return UNITY_END();
 }
-
+item itemForTest;
+    
 /* Write all the test functions */ 
 void test_add(void) {
-    item itemForTest;
     itemForTest.item_name="turtle";
     itemForTest.stock = 60;
   TEST_ASSERT_EQUAL(0, writeToFile(&itemForTest));
   //TEST_ASSERT_EQUAL(-10, add(10, -20));
-  //TEST_ASSERT_EQUAL(-30, add(-10, -20));
+  //
   //TEST_ASSERT_EQUAL(10, add(-10, 20));
 }
 
@@ -46,5 +46,6 @@ void test_remove()
 }
 
 void test_search(){
-  
+  char *stringTosearch ="turtle";
+  TEST_ASSERT_EQUAL(0, Searchinfile(stringTosearch));
 }

@@ -21,7 +21,7 @@ void Add_item(){
     ///adding details of item to be added to struct itemToAdd
     item itemToAdd;
     itemToAdd.item_name = malloc(20);
-    printf("Add Item\n");
+    printf("\n\tAdd Item\n\n");
 
     printf("Enter name of item\n");
     scanf("%30s" , itemToAdd.item_name);

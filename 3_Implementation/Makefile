@@ -28,8 +28,8 @@ SRC = ./src/Inventory.c \
 all : $(SRC) $(BUILD)
 	gcc -o $(PROJECT_OUTPUT) $(SRC) $(INC)
 
-
-clear : 
+# Remove all the built files, invoke by `make clean`
+clean : 
 	$(RM) $(BUILD)
 
 run : $(PROJECT_NAME)
@@ -60,9 +60,6 @@ coverageCheck:$(BUILD)
 $(BUILD):
 	mkdir build
 
-# Remove all the built files, invoke by `make clean`
-clean:
-	rm -rf $(BUILD)
 
 #Document files
 DOCUMENTATION_OUTPUT = documentation/html

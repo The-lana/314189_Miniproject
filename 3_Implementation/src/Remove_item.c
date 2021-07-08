@@ -9,86 +9,106 @@
  * 
  */
 #include "inventory.h"
+int count =0 ;
+
 
 void Remove_item()
 {
     ///write the contents of database to a new file without the item to be removed
-    printf("Remove item\n");
+    printf("\n\tRemove item\n\n");
     item itemToRemove;
     itemToRemove.item_name = malloc(30);
-    char * temp;
-    temp = malloc(30);
- 
-    fileptr = fopen("myfile.txt" , "r");
-
-    if(fileptr == NULL)
-    printf("Failed to open file\n");
-
-    fileptrtemp = fopen("tempfile.txt", "w");
-
-       if(fileptrtemp == NULL)
-    printf("Failed to open file\n");
-
-    printf("Enter item to be removed\n");
+    
+     printf("Enter item to be removed\n");
     scanf("%30s\n" , itemToRemove.item_name); 
     //has an error that it doesnt move to next command automatically unless you enter any character
     getchar();
-    //getchar();
 
+    WritetoTempfile(&itemToRemove);
+    WritefromTempfile();
+
+    free(itemToRemove.item_name);
+}
+
+int WritetoTempfile(item *itemToRemove)
+{
+
+    fileptr = fopen("myfile.txt" , "r");
+
+    if(fileptr == NULL) {
+    printf("Failed to open file\n");
+    return (-1);
+    }
+
+    fileptrtemp = fopen("tempfile.txt", "w");
+
+       if(fileptrtemp == NULL){
+    printf("Failed to open file\n");
+    return (-1);
+       }
+
+    char * temp;
+    temp = malloc(30);
+   
     fseek(fileptr, 0, SEEK_SET);
 
     while(!feof(fileptr))
     {
         fscanf(fileptr, "%30s",temp);
-        //printf("%s " , temp);
-         if(strcmp(itemToRemove.item_name , temp)!=0 ) 
+         if(strcmp(itemToRemove->item_name , temp)!=0 ) 
         {
-            //fputs(temp,fileptrtemp);
-            fprintf(fileptrtemp , "%30s \n" , temp);
-            //printf("printing to temp file %s\n" , temp);
-            //free(temp);
+            
+            fprintf(fileptrtemp , "%s \n" , temp);
         }
         else {
+            count ++;
             fscanf(fileptr , " %30s" , temp);
-            //printf("in else\n");
+
         }
     }
     fclose(fileptrtemp);
     fclose(fileptr);
+    free(temp);
+    }   
+
+
+int WritefromTempfile() 
+{
     /// put the contents of the temp file back to myfile thus removing the contents
     fileptr = fopen("myfile.txt" , "w");
     if(fileptr == NULL)
     {
         printf("falied to open file \n");
+        return (-1);
     }
-    else printf("open for writing to inventory\n");
+   
     fileptrtemp = fopen("tempfile.txt" , "r");
     if(fileptrtemp == NULL)
     {
         fclose(fileptr);
         printf("failed to open file\n");
+        return (-1);
     } 
-    else printf("temp file open for reading\n"); 
     char *temp2;
     temp2 = malloc(30);
     //copying contents
     fseek(fileptrtemp, 0, SEEK_SET);
-      printf("fseek done\n");
+
        while(!feof(fileptrtemp))
        {
-           //printf("in while \n");
-             //temp2 =  malloc (30);
            fscanf(fileptrtemp ,"%30s", temp2) ;
          fprintf(fileptr ,"%s\n" ,temp2);
-        printf("%30s" , temp2);
-        //free(temp2);
        }
 
-    printf("removed item successfully\n");
+    if(count==0)
+    {
+        printf("\nItem not found to remove\n\n");
+    }
+    else
+    printf("\nremoved item successfully\n\n");
 
     fclose(fileptr);
     fclose(fileptrtemp);
-    free(itemToRemove.item_name);
-    free(temp);
     free(temp2);
+    return 0;
 }

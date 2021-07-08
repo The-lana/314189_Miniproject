@@ -1,7 +1,5 @@
 fishfood
 56
-turtle
-59
 lovebirds
 987
 parrot
@@ -13,7 +11,8 @@ cockateil
 dog
 9
 glider
-51
-
-turtle
-60
+34
+cage
+32
+cat
+9
