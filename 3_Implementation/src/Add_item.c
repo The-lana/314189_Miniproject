@@ -31,7 +31,7 @@ void Add_item(){
     scanf("%d", &itemToAdd.stock );
 
     writeToFile(&itemToAdd);
-    
+    free(itemToAdd.item_name);
 
 }
 
@@ -55,7 +55,7 @@ int writeToFile(item *itemToAdd){
        fputs(tobewrittenl,fileptr);
        free(tobewrittenl);
     }
-    free(itemToAdd->item_name);
+    
     fclose(fileptr);
     return 0;
 

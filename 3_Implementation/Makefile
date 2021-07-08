@@ -12,14 +12,11 @@ endif
 # Output directory
 BUILD = build
 
-#$(EXECUTABLE): prog.c
-#	gcc prog.c
-
 #$(EXECUTABLE) : out.exe
 
 #header files
 INC = -I ./inc\
--I ./unity\
+-I ./unity \
 
 #source codes
 SRC = ./src/Inventory.c \
