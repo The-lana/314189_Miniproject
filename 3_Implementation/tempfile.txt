@@ -14,8 +14,6 @@ turtle
 60 
 dog 
 56 
-cat 
-19 
 glider 
 76 
 turtle 
