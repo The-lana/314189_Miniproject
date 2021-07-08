@@ -23,7 +23,7 @@ int main()
 
 /* Run Test functions */
   RUN_TEST(test_add);
-  //RUN_TEST(test_remove);
+  RUN_TEST(test_remove);
   RUN_TEST(test_search);
     /* Close the Unity Test Framework */
   return UNITY_END();
@@ -31,21 +31,25 @@ int main()
 item itemForTest;
     
 /* Write all the test functions */ 
-void test_add(void) {
+
+void test_add(void)
+ {
     itemForTest.item_name="turtle";
     itemForTest.stock = 60;
   TEST_ASSERT_EQUAL(0, writeToFile(&itemForTest));
-  //TEST_ASSERT_EQUAL(-10, add(10, -20));
-  //
-  //TEST_ASSERT_EQUAL(10, add(-10, 20));
+  
 }
 
 void test_remove()
 {
+  itemForTest.item_name = "cat";
+  TEST_ASSERT_EQUAL(0 ,  WritetoTempfile(&itemForTest));
+  TEST_ASSERT_EQUAL(0 ,  WritefromTempfile());
 
 }
 
-void test_search(){
+void test_search()
+{
   char *stringTosearch ="turtle";
   TEST_ASSERT_EQUAL(0, Searchinfile(stringTosearch));
 }
