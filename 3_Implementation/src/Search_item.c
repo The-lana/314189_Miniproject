@@ -18,9 +18,8 @@
  */
 void Search_item()
 {
-        ///A struct variable itemForSearch to receive and store data from input.
-       
-     
+        
+    
     printf("\n\tSearch item\n\n");
    
     char *stringTosearch = malloc(30);      //name from input to search
@@ -34,13 +33,20 @@ void Search_item()
     free(stringTosearch);
 }
 
+/**
+ * @brief function to search if item in stringToSearch is found in file/database
+ * 
+ * @param stringTosearch string pointer that contains the name of the item to be searched
+ * @return int to detect errors .the function returns 0 for normal working and -1 when error is encountered
+ */
 int Searchinfile(char *stringTosearch)
 {
+    ///A struct variable itemForSearch to receive and store data from the file about stringToSearch
    item itemFromSearch;
-        //itemFromSearch.stock = 0;
         itemFromSearch.item_name = NULL;
     itemFromSearch.item_name = malloc(30);
-    fileptr = fopen("myfile.txt" , "r");     //opening inventory file
+    ///pointer to database file
+    fileptr = fopen("myfile.txt" , "r");     
 	
     if(fileptr == NULL) {
 	free(itemFromSearch.item_name);
@@ -49,8 +55,9 @@ int Searchinfile(char *stringTosearch)
 	}
     else
     {
-    
+    ///variable to identify if the search string was encountered in the inventory string
     int count =0;
+    ///string to recieve data from the file to be compared with the string to search
     char * stringFromFile = malloc(30);
     while(!feof(fileptr))
     {

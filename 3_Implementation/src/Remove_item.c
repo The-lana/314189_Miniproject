@@ -9,13 +9,20 @@
  * 
  */
 #include "inventory.h"
+
+///function to check if the item to be removed was present in the database
 int count =0 ;
 
-
+/**
+ * @brief Function to read the name of the item to be removed.
+ * And call functions to remove the item specified by the user
+ * 
+ */
 void Remove_item()
 {
-    ///write the contents of database to a new file without the item to be removed
+    
     printf("\n\tRemove item\n\n");
+    ///structure item to store the name of the item to be removed
     item itemToRemove;
     itemToRemove.item_name = malloc(30);
     
@@ -30,16 +37,22 @@ void Remove_item()
     free(itemToRemove.item_name);
 }
 
+/**
+ * @brief Write the contents of database to a temp file without excluding the item to be removed
+ * 
+ * @param itemToRemove Contains the name or details of the item to be removed
+ * @return int Return to notify when error occurs 0 for error free and -1 for errors
+ */
 int WritetoTempfile(item *itemToRemove)
 {
-
+    ///pointer to databse file
     fileptr = fopen("myfile.txt" , "r");
 
     if(fileptr == NULL) {
     printf("Failed to open file\n");
     return (-1);
     }
-
+    ///pointer to temporary file 
     fileptrtemp = fopen("tempfile.txt", "w");
 
        if(fileptrtemp == NULL){
@@ -71,17 +84,23 @@ int WritetoTempfile(item *itemToRemove)
     free(temp);
     }   
 
-
+/**
+ * @brief function to copy the contents of the temporary file back to the databse file.
+ * The temporary file contains the data after deletion of the item
+ * 
+ * @return int Return to notify when error occurs 0 for error free and -1 for errors
+ */
 int WritefromTempfile() 
 {
-    /// put the contents of the temp file back to myfile thus removing the contents
+    //////pointer to databse file
     fileptr = fopen("myfile.txt" , "w");
     if(fileptr == NULL)
     {
         printf("falied to open file \n");
         return (-1);
     }
-   
+    
+    ///pointer to temporary file 
     fileptrtemp = fopen("tempfile.txt" , "r");
     if(fileptrtemp == NULL)
     {
@@ -99,7 +118,7 @@ int WritefromTempfile()
            fscanf(fileptrtemp ,"%30s", temp2) ;
          fprintf(fileptr ,"%s\n" ,temp2);
        }
-
+    //check for count thus identifying whether the item to be removed was found in the database
     if(count==0)
     {
         printf("\nItem not found to remove\n\n");
