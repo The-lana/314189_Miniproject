@@ -78,7 +78,8 @@ int Searchinfile(char *stringTosearch)
     }
     else {
     printf("Item found \n\n");
-    printf("Name : %s \nstock available : %d\n", itemFromSearch.item_name , itemFromSearch.stock );
+    printf("Name : %s \nstock available : %d\n", 
+            itemFromSearch.item_name , itemFromSearch.stock );
     }
 
     
