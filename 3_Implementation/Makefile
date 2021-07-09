@@ -49,7 +49,7 @@ TEST_OUTPUT = $(BUILD)/$(PROJECT_NAME)_test.$(EXECUTABLE)
 
 
 test : $(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
+	gcc  -g $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
 	./$(TEST_OUTPUT)
 
 coverageCheck:$(BUILD)

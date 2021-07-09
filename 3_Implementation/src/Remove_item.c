@@ -45,17 +45,18 @@ void Remove_item()
  */
 int WritetoTempfile(item *itemToRemove)
 {
+    FILE *fileptr1 , *fileptrtemp1;
     ///pointer to databse file
-    fileptr = fopen("myfile.txt" , "r");
+    fileptr1 = fopen("myfile.txt" , "r");
 
-    if(fileptr == NULL) {
+    if(fileptr1 == NULL) {
     printf("Failed to open file\n");
     return (-1);
     }
     ///pointer to temporary file 
-    fileptrtemp = fopen("tempfile.txt", "w");
+    fileptrtemp1 = fopen("tempfile.txt", "w");
 
-       if(fileptrtemp == NULL){
+       if(fileptrtemp1 == NULL){
     printf("Failed to open file\n");
     return (-1);
        }
@@ -63,24 +64,24 @@ int WritetoTempfile(item *itemToRemove)
     char * temp;
     temp = malloc(30);
    
-    fseek(fileptr, 0, SEEK_SET);
+    fseek(fileptr1, 0, SEEK_SET);
 
-    while(!feof(fileptr))
+    while(!feof(fileptr1))
     {
-        fscanf(fileptr, "%30s",temp);
+        fscanf(fileptr1, "%30s",temp);
          if(strcmp(itemToRemove->item_name , temp)!=0 ) 
         {
             
-            fprintf(fileptrtemp , "%s \n" , temp);
+            fprintf(fileptrtemp1 , "%s \n" , temp);
         }
         else {
             count ++;
-            fscanf(fileptr , " %30s" , temp);
+            fscanf(fileptr1 , " %30s" , temp);
 
         }
     }
-    fclose(fileptrtemp);
-    fclose(fileptr);
+    fclose(fileptrtemp1);
+    fclose(fileptr1);
     free(temp);
     return 0;
     }   

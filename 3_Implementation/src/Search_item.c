@@ -71,7 +71,6 @@ int Searchinfile(char *stringTosearch)
         }
        
     }
-    free(stringTosearch);
     
     if (count == 0 )
     {
