@@ -16,10 +16,5 @@ cat
 19
 glider
 76
-
-turtle
 60
-turtle
-60
-turtle
 60

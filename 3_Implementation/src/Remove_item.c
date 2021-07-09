@@ -82,6 +82,7 @@ int WritetoTempfile(item *itemToRemove)
     fclose(fileptrtemp);
     fclose(fileptr);
     free(temp);
+    return 0;
     }   
 
 /**

@@ -48,13 +48,11 @@ int Searchinfile(char *stringTosearch)
     ///pointer to database file
     fileptr = fopen("myfile.txt" , "r");     
 	
-    if(fileptr == NULL) 
-    {
+    if(fileptr == NULL) {
 	free(itemFromSearch.item_name);
     printf("File not found\n");
     return (-1);
 	}
-    
     else
     {
     ///variable to identify if the search string was encountered in the inventory string
