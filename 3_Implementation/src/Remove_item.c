@@ -59,7 +59,7 @@ int WritetoTempfile(item *itemToRemove)
     printf("Failed to open file\n");
     return (-1);
        }
-
+    
     char * temp;
     temp = malloc(30);
    

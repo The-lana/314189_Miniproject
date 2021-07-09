@@ -10,12 +10,10 @@ cockateil
 32 
 cage 
 32 
-turtle 
-60 
 dog 
 56 
+cat 
+19 
 glider 
 76 
-turtle 
-60 
 60 
