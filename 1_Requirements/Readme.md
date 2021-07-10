@@ -8,11 +8,11 @@
 
 ## Cost and Features and Timeline
 
-    * Add and remove data conveniently
-        + Reduce inventory on sale 
-        + Add to inventory on Purchase of goods 
-    * Access and view the stock of any item conveniently either using complete name of product or using a short code
-    * Store data into different categories for easy access and editing 
+* Add and remove data conveniently
+     + Reduce inventory on sale 
+    + Add to inventory on Purchase of goods 
+* Access and view the stock of any item conveniently either using complete name of product or using a short code
+* Store data into different categories for easy access and editing 
 
 
 ## SWOT ANALYSIS
