@@ -34,9 +34,9 @@ F04 | Remove items
 
 No. | Challenges Faced                      | How it was overcome
 ----|---------------------------------------| --------------
-1. Understand the requirements in a shop    | Studied the needs in a shop
-2. Find necessary details of each item      | Studied the details required about a shop
-3. Github workflow issues                   | Had help from friends to overcome 
+1.  | Understand the requirements in a shop    | Studied the needs in a shop
+2. | Find necessary details of each item      | Studied the details required about a shop
+3. | Github workflow issues                   | Had help from friends to overcome 
 
 ## Learning Resources
 1. [markdownCheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
