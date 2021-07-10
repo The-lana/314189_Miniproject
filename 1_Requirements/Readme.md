@@ -5,7 +5,7 @@
 
 ## Research
 ![Inventory management system](https://github.com/The-lana/314189_miniproject/blob/main/1_Requirements/chart1.png)
--- Content 
+
 ## Cost and Features and Timeline
 ![Description](Link to Pic)
     *Add and remove data conveniently
@@ -14,8 +14,7 @@
     * Access and view the stock of any item conveniently either using complete name of product or using a short code
     * Store data into different categories for easy access and editing 
 
-## Defining Our System
-    -- TBD
+
 ## SWOT ANALYSIS
 ![SWOT](https://github.com/The-lana/314189_miniproject/blob/main/1_Requirements/SWOT.png)
 
