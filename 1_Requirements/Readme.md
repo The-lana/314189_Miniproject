@@ -7,7 +7,7 @@
 ![Inventory management system](https://github.com/The-lana/314189_miniproject/blob/main/1_Requirements/chart1.png)
 
 ## Cost and Features and Timeline
-![Description](Link to Pic)
+
     *Add and remove data conveniently
         +Reduce inventory on sale 
         +Add to inventory on Purchase of goods 
