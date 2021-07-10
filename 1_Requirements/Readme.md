@@ -47,9 +47,9 @@
 | -- ID | Description                              | Status (Implemented/Future) |
 | ----- | ---------------------------------------- | --------------------------- |
 | -- 01 | Add / Remove items                       |     Implemented             |
-| -- 02 | Update the present items                 |                             |
+| -- 02 | Update the present items                 |         Future              |
 | -- 03 | Search and find items using name         |     Implemented             |
-| -- 04 | Find turnover for a month                |                             |
+| -- 04 | Find turnover for a month                |          Future             |
 
 ##  Low level Requirements:
 
@@ -57,5 +57,5 @@
  ---- | ---------------------------------------- | ---------------------------
    01 | Database to store data                   |      Implemented
    02 | Approach to search for data              |      Implemented
-   03 | Divide products into categories          |      
-   04 | Access data based on name using pointers |      Implemented
+   03 | Divide products into categories          |      Future
+   04 | Access data based on name using pointers from database file |      Implemented
