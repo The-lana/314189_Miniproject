@@ -3,11 +3,11 @@
 ## High Level Design 
 
 --- TBD Structural and Behavioural Diagram
-![HighLevelStructuralDiagram](Link to Pic)
-![HighLevelBehaviouralDiagram](Link to Pic)
+
+![HighLevelBehaviouralDiagram](https://github.com/The-lana/314189_miniproject/blob/main/2_Design/Behavioural_diagram/hl_diagram.png)
 
 ## Low Level Design 
 
 --- TBD Structural and Behavioural Diagram
-![FeaturesLevelStructuralDiagram](Link to Pic)
-![FeaturesBehaviouralDiagram](Link to Pic)
+
+![FeaturesBehaviouralDiagram](https://github.com/The-lana/314189_miniproject/blob/main/2_Design/Behavioural_diagram/diagram.png)
