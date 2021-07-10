@@ -16,19 +16,27 @@ Folder             | Description
 
 ## Contributors List and Summary
 
-PS No. |  Name   |    Features    | Issuess Raised |Issues Resolved|No Test Cases|Test Case Pass
+SF ID |  Name   |    Features    | Issues Raised |Issues Resolved|No Test Cases|Test Case Pass
 -------|---------|----------------|----------------|---------------|-------------|--------------
-#1 | Alna     | Add items        | X No          | X No      |X No           |X No     
-#2 | Alna     | Search for added items | X No     | X No     |X No           |X No    
-#3  | Alna    | Remove items      |       X No    |   X No    |     X No      |  X No
+314189 | Alna    | F01, F02, F03, F04  |   04      | 04            |  04         | 04   
 
+
+## Features
+
+No. | Feature
+----| ----
+F01 | Select option (Add , Remove or search)
+F02 | Add items to inventory
+F03 | Search items and display results
+F04 | Remove items
 
 ## Challenges Faced and How Was It Overcome
 
-1. ABC
-2. BCD
-3. ...
-4. ...
+No. | Challenges Faced                      | How it was overcome
+----|---------------------------------------| --------------
+1. Understand the requirements in a shop    | Studied the needs in a shop
+2. Find necessary details of each item      | Studied the details required about a shop
+3. Github workflow issues                   | Had help from friends to overcome 
 
 ## Learning Resources
 1. [markdownCheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)

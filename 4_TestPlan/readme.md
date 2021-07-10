@@ -1,17 +1,13 @@
 # TEST PLAN:
 
-## Table no: High level test plan
 
-| **Test ID** | **Description**                                              | **Exp I/P** | **Exp O/P** | **Actual Out** |**Type Of Test**  |    
+
+| **Test ID** | **Description**                                   | **Exp I/P** | **Exp O/P** | **Actual Out** |**Type Of Test**  |
+
 |-------------|-----------------------------------------------------|------------|-------------|----------------|------------------|
-|  H_01       |-----------------------------------------------------|  ------------|-------------|----------------|Requirement based |
-|  H_02       |---------------------------------------------------|  ------------|-------------|----------------|Scenario based    |
-|  H_03       |---------------------------------------------------|  ------------|-------------|----------------|Boundary based    |
 
-## Table no: Low level test plan
+|  01    |---Check if Add works correctly---   |  --input values to add----|--Add item to file---|--item added to file----|Technical based |
+|  02    |---Check if search works correctly---|  --name to be searched--|--display details of item--|--Details of required item is displayed--|Technical based    |
+|  03    |---Check if remove works correctly---|  --name of item to be removed-|--remove item from file--|--the item and its details are removed from file---|Technical based |
 
-| **Test ID** | **Description**                                              | **Exp IN** | **Exp OUT** | **Actual Out** |**Type Of Test**  |    
-|-------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
-|  L_01       |--------------------------------------------------------------|  ------------|-------------|----------------|Requirement based |
-|  L_02       |--------------------------------------------------------------|  ------------|-------------|----------------|Scenario based    |
-|  L_03       |--------------------------------------------------------------|  ------------|-------------|----------------|Boundary based    |
+
