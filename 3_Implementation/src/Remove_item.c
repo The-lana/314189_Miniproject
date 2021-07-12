@@ -28,9 +28,9 @@ void Remove_item()
     
      printf("Enter item to be removed\n");
     scanf("%30s" , itemToRemove.item_name); 
-    //has an error that it doesnt move to next command automatically unless you enter any character
     getchar();
-    //printf(" ");
+
+    
     WritetoTempfile(&itemToRemove);
     WritefromTempfile();
 

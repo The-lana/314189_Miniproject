@@ -51,4 +51,5 @@ void test_search()
 {
   char *stringTosearch ="turtle";
   TEST_ASSERT_EQUAL(0, Searchinfile(stringTosearch));
+  TEST_ASSERT_EQUAL(1, Searchinfile("noitem"));
 }

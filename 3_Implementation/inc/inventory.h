@@ -25,8 +25,9 @@ FILE *fileptrtemp;
   typedef struct 
     {
         /* data */
-        char *item_name;
+        char *item_name , productID;
         int stock ;
+        float sellprice , buyprice;
     }item;
     
 /*
