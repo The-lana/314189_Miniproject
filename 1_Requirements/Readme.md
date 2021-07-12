@@ -43,12 +43,12 @@
 # Detail requirements
 ## High Level Requirements:
 
-| -- ID | Description                              | Status (Implemented/Future) |
+|  ID | Description                              | Status (Implemented/Future) |
 | ----- | ---------------------------------------- | --------------------------- |
-| -- 01 | Add / Remove items                       |     Implemented             |
-| -- 02 | Update the present items                 |         Future              |
-| -- 03 | Search and find items using name         |     Implemented             |
-| -- 04 | Find turnover for a month                |          Future             |
+|  01 | Add / Remove items                       |     Implemented             |
+| 02 | Update the present items                 |         Future              |
+|  03 | Search and find items using name         |     Implemented             |
+| 04 | Find turnover for a month                |          Future             |
 
 ##  Low level Requirements:
 
