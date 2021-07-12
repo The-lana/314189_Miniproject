@@ -25,21 +25,11 @@ FILE *fileptrtemp;
   typedef struct 
     {
         /* data */
-        char *item_name , productID;
+        char *item_name ;
         int stock ;
-        float sellprice , buyprice;
     }item;
     
-/*
-typedef struct category
-{
-    
-    char *category_name;
-    int number_of_category;
-    item *array_of_item[item::number_of_items+1] ;
-   
-};               
-  */
+
  
 
 void Add_item();

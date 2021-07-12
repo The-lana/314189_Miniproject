@@ -56,7 +56,7 @@ int Searchinfile(char *stringTosearch)
     else
     {
     ///variable to identify if the search string was encountered in the inventory string
-    int count =0;
+    int count = 0;
     ///string to recieve data from the file to be compared with the string to search
     char * stringFromFile = malloc(30);
     while(!feof(fileptr))
@@ -78,8 +78,7 @@ int Searchinfile(char *stringTosearch)
     }
     else {
     printf("Item found \n\n");
-    printf("Name : %s \nstock available : %d\n", 
-            itemFromSearch.item_name , itemFromSearch.stock );
+    printf("Name : %s \nstock available : %d \n", itemFromSearch.item_name , itemFromSearch.stock );
     }
 
     
