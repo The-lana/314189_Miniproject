@@ -4,9 +4,11 @@
 ifeq ($(OS), Windows_NT)
 	EXECUTABLE = exe
 	RM = del
+	CP = copy
 else
 	EXECUTABLE=out
 	RM = rm -rf
+	CP = cp
 endif
 
 # Output directory
@@ -30,7 +32,9 @@ all : $(SRC) $(BUILD)
 
 # Remove all the built files, invoke by `make clean`
 clean : 
-	$(RM) $(BUILD)
+	$(RM) $(BUILD) $(wildcard *.gcda) $(wildcard *.gcov) $(wildcard *.gcno)
+	$(RM) myfile.txt tempfile.txt
+	$(CP) myfile.bak myfile.txt
 
 run : $(PROJECT_NAME)
 	./$(PROJECT_OUTPUT)
@@ -52,10 +56,10 @@ test : $(BUILD)
 	gcc  -g $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
 	./$(TEST_OUTPUT)
 
-coverageCheck:$(BUILD)
+coverageCheck : $(BUILD)
 	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
 	./$(TEST_OUTPUT)
-	gcov -a $(TEST_SRC) 
+	gcov -a $(TEST_SRC) -o . 
 
 $(BUILD):
 	mkdir build
@@ -67,3 +71,4 @@ DOCUMENTATION_OUTPUT = documentation/html
 doc : 
 	make -C ./documentation
 # $(DOCUMENTATION_OUTPUT)
+
