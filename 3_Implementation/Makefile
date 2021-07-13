@@ -72,3 +72,5 @@ doc :
 	make -C ./documentation
 # $(DOCUMENTATION_OUTPUT)
 
+leak : 
+	valgrind $(TEST_OUTPUT)

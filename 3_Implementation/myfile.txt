@@ -20,4 +20,3 @@ dog
 34
 shih-tzu
 11
-
