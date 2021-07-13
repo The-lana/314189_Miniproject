@@ -10,8 +10,8 @@
  */
 #include "inventory.h"
 
-///function to check if the item to be removed was present in the database
-int count =0 ;
+
+int count =0 ;  ///< count to check if item was found or not
 
 /**
  * @brief Function to read the name of the item to be removed.
@@ -22,8 +22,8 @@ void Remove_item()
 {
     
     printf("\n\tRemove item\n\n");
-    ///structure item to store the name of the item to be removed
-    item itemToRemove;
+    
+    item itemToRemove;  ///< structure item to store the name of the item to be removed
     itemToRemove.item_name = malloc(30);
     
      printf("Enter item to be removed\n");
@@ -45,16 +45,16 @@ void Remove_item()
  */
 int WritetoTempfile(item *itemToRemove)
 {
-    FILE *fileptr1 , *fileptrtemp1;
-    ///pointer to databse file
+    FILE *fileptr1 ;     ///< pointer to databse file
+    FILE *fileptrtemp1; ///< pointer to temporary file for removing purpose
     fileptr1 = fopen("myfile.txt" , "r");
 
     if(fileptr1 == NULL) {
     printf("Failed to open file\n");
     return (-1);
     }
-    ///pointer to temporary file 
-    fileptrtemp1 = fopen("tempfile.txt", "w");
+    
+    fileptrtemp1 = fopen("tempfile.txt", "w"); ///< pointer to temporary file 
 
        if(fileptrtemp1 == NULL){
     printf("Failed to open file\n");
@@ -94,16 +94,16 @@ int WritetoTempfile(item *itemToRemove)
  */
 int WritefromTempfile() 
 {
-    //////pointer to databse file
-    fileptr = fopen("myfile.txt" , "w");
+   
+    fileptr = fopen("myfile.txt" , "w");     ///< pointer to databse file
     if(fileptr == NULL)
     {
         printf("falied to open file \n");
         return (-1);
     }
     
-    ///pointer to temporary file 
-    fileptrtemp = fopen("tempfile.txt" , "r");
+    
+    fileptrtemp = fopen("tempfile.txt" , "r");  ///< pointer to temporary file 
     if(fileptrtemp == NULL)
     {
         fclose(fileptr);

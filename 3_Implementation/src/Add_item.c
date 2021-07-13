@@ -18,8 +18,8 @@
  * 
  */
 void Add_item(){
-    ///adding details of item to be added to struct itemToAdd
-    item itemToAdd;
+    
+    item itemToAdd; ///< adding details of item to be added to struct itemToAdd
     itemToAdd.item_name = malloc(20);
     printf("\n\tAdd Item\n\n");
 
@@ -42,14 +42,14 @@ void Add_item(){
  * @return int It is used here to detect errors in filehandling. It returns -1 when file does not open.
  */
 int writeToFile(item *itemToAdd){
-    fileptr = fopen("myfile.txt", "a");
+    fileptr = fopen("myfile.txt", "a");  ///< pointer to file where data is stored
     if(fileptr == NULL) {
         perror("Error opening file.\n");
         return -1;
         }
     else {
-        ///store the data from struct 'item' into a string which is then written into the database
-        char *tobewrittenl;
+       
+        char *tobewrittenl;  ///< to store the data from struct 'item' into a string which is then written into the database
         tobewrittenl = malloc(50);
         snprintf(tobewrittenl ,30,"%s\n%d\n",itemToAdd->item_name,itemToAdd->stock);
        fputs(tobewrittenl,fileptr);

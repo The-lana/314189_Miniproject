@@ -19,17 +19,17 @@
  * @return int 
  */
 int main (){
-    ///variable to store which option has been selected as 1,2 or 3.
-    int option =0;
-    ///variable to be kept at 1 for continuing,when a different option is given the program ends.
-    int check_to_continue = 1;
-    ///do while loop for reading the option entered by the user and select options and also check for contniue or not.
-    do {
+    int option =0;      ///< variable to store which option has been selected as 1,2 or 3.
+
+    int check_to_continue = 1;      ///< variable to be kept at 1 for continuing,when a different option is given the program ends.
+
+   
+    do {         ///< do while loop for reading the option entered by the user and select options and also check for contniue or not.
     printf("Would you like to Add , Remove or View contents\n");
     printf("press 1 for Add \n 2 to remove and \n 3 to search and view\n");
     scanf("%d" , &option);
-    ///switch to select option
-    switch (option)
+    
+    switch (option) ///<  switch to select option
     {
         case 1 : Add_item();
                 break;
@@ -42,12 +42,6 @@ int main (){
     printf("do you want to continue\n Enter 1 to continue and 0 to exit");
     scanf("%d" , &check_to_continue);
     
-    /*
-    if(check_to_continue != '1' || check_to_continue !='0') {
-    printf("invalid input\n");
-    printf("enter correct value\n");
-    }
-    */
    
     }while(check_to_continue == 1);
     

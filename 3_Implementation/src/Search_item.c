@@ -22,7 +22,7 @@ void Search_item()
     
     printf("\n\tSearch item\n\n");
    
-    char *stringTosearch = malloc(30);      //name from input to search
+    char *stringTosearch = malloc(30);      ///< name from input to search
     printf("Enter name of item to search\n");
     scanf("%30s" , stringTosearch);
     //getchar();
@@ -41,12 +41,12 @@ void Search_item()
  */
 int Searchinfile(char *stringTosearch)
 {
-    ///A struct variable itemForSearch to receive and store data from the file about stringToSearch
-   item itemFromSearch;
+   item itemFromSearch;     ///< A struct variable itemForSearch to receive and store data from the file about stringToSearch
+
         itemFromSearch.item_name = NULL;
     itemFromSearch.item_name = malloc(30);
-    ///pointer to database file
-    fileptr = fopen("myfile.txt" , "r");     
+    
+    fileptr = fopen("myfile.txt" , "r");    ///< pointer to database file 
 	
     if(fileptr == NULL) {
 	free(itemFromSearch.item_name);
@@ -55,10 +55,10 @@ int Searchinfile(char *stringTosearch)
 	}
     else
     {
-    ///variable to identify if the search string was encountered in the inventory string
-    int count = 0;
-    ///string to recieve data from the file to be compared with the string to search
-    char * stringFromFile = malloc(30);
+    
+    int count = 0;  ///< variable to identify if the search string was encountered in the inventory string
+   
+    char * stringFromFile = malloc(30);  ///< string to recieve data from the file to be compared with the string to search
     while(!feof(fileptr))
     {
         fscanf(fileptr,"%30s", stringFromFile);
